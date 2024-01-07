@@ -1,0 +1,30 @@
+.container{
+   
+    width: 100%;
+    height:max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.container h1{
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    
+}
+.users{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+   
+}
+@media screen and (max-width:900px){
+    .container{
+        max-width: 100%;
+    }
+}

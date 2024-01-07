@@ -1,0 +1,175 @@
+.container{
+    width: 100%;
+    height:calc(100vh - 170px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 2rem;
+    position: relative;
+    margin: 0;
+}
+
+.generalinfo{
+    color: var(--soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.user .generalinfo img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding: 10px;
+    text-align: center;
+    gap: 10px;
+
+}
+.backLink{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  
+}
+.user h2{
+    color: var(--secondary);
+    padding-bottom: 10px;
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+    height: max-content;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    color: var(--soft);
+}
+.location h3{
+    color: var(--secondary);
+}
+
+.userPosts{
+    display: flex;
+    max-height: 500px;
+    overflow: scroll;
+    flex-direction: column;
+    gap: 20px;
+}
+.btns{
+    display: flex;
+    gap: 1rem;
+}
+.editmodal{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--bg);
+    border: 4px solid var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: -3px -3px 10px 5px black;
+    z-index: 999;
+}
+ .editmodal form{
+    width: 300px;
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+ }
+ .inputgroup{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+ }
+ .inputgroup input{
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding-left: 10px;
+    font-weight: bold;
+ }
+
+@media screen and (max-width:900px){
+    .container{
+        flex-direction: column;
+        width: 100%;
+        height: max-content ;
+        padding: 5px;
+        
+    }
+    .generalinfo{
+        align-items: center;
+        
+    }
+    .user{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        margin-bottom: 5rem;
+        margin-top: 1rem;
+    }
+    .backLink{
+        display: none;
+    }
+    .userPosts{
+        width: 100%;
+        display: flex;
+        max-height: max-content;
+        height: max-content;
+        overflow-x: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .editmodal{
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translate(0);
+    }
+
+
+}
+.container button{
+    background-color: var(--secondary);
+    color: var(--bg);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    margin-top: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.container button:hover{
+    background-color: var(--bg);
+    color: var(--secondary);
+    text-decoration: underline;
+    transition: all 0.5s;
+   
+} 

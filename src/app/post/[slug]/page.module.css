@@ -1,0 +1,226 @@
+.container{
+    width: 60%;
+    border: 2px solid var(--soft);
+    height: calc(100vh - 170px);
+    border-top: none;
+    border-bottom: none;
+    margin: auto;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+   
+}
+.userpanel{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.136);
+    color: rgb(250, 249, 249);
+    padding: 10px;
+    border-radius: 20px;
+}
+.userpanel img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--soft);
+
+}
+.userpanel .person{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    
+
+}
+.infos span{
+    color: var(--bg);
+    font-weight: 500;
+    
+}
+
+.post{
+    width: 70%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--soft);
+    margin-top: 1rem;
+}
+.top{
+    width: 100%;
+}
+.top img{
+    width: 100%;
+    height:280px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-fit: cover;
+    
+    
+}
+.bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom span{
+    color: var(--soft);
+}.tags{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.tags .tag{
+    background-color: var(--secondary);
+    color: var(--bg);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+.post a{
+    align-self: flex-end;
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--secondary);
+}
+.btns{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.post button{
+    
+ 
+    font-weight: bold;
+    color: var(--secondary);
+    border: none;
+    outline: none;
+    background-color: var(--secondary);
+    color: var(--bg);
+    padding: 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.post button:hover{
+    
+    color: var(--soft);
+    transform: scale(1.1);
+    transition: all 0.5s
+
+}
+.post a:hover{
+    color: var(--soft);
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.editmodal{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--bg);
+    border: 4px solid var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: -3px -3px 10px 5px black;
+    z-index: 999;
+}
+ .editmodal form{
+    width: 300px;
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+ }
+ .inputgroup{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+ }
+ .inputgroup input{
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 5px;
+    padding-left: 10px;
+    font-weight: bold;
+ }
+ .inputgroup textarea{
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding-left: 10px;
+    font-weight: bold;
+    padding: 5px;
+    height: 100px;
+ }
+ .container button{
+    background-color: var(--secondary);
+    color: var(--bg);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+   
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+.container button:hover{
+    background-color: var(--bg);
+    color: var(--secondary);
+    text-decoration: underline;
+    transition: all 0.5s;
+   
+} 
+@media screen and (max-width:900px){
+    .container{
+        width: 100%;
+        height: max-content;
+        padding: 10px;
+    }
+    .userpanel{
+        flex-direction: column;
+        margin-top: 1rem;
+        width: 100%;
+    }
+  
+    .tags{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .post{
+        width: 100%;
+    }
+    .editmodal{
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translate(0);
+    }
+}
